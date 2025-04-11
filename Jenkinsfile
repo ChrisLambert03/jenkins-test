@@ -30,7 +30,7 @@ pipeline {
                 commitish: "${env.GIT_COMMIT}",
                 bodyFile: 'release.md',
                 draft: false,
-                prerelease: true
+                prerelease: false
                 )
             }
         }
