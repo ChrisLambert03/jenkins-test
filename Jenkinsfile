@@ -32,7 +32,7 @@ pipeline {
                 prerelease: true
                 )
                 uploadGithubReleaseAsset(
-                credentialId: 'github-token',
+                credentialId: 'Github-PAT',
                 repository: 'jcustenborder/xjc-kafka-connect-plugin',
                 tagName: 'v1.0.0', 
                 uploadAssets: [
