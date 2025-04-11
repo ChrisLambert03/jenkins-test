@@ -38,7 +38,7 @@ pipeline {
             steps{
                 uploadGithubReleaseAsset(
                 credentialId: 'Github-PAT',
-                repository: 'jcustenborder/xjc-kafka-connect-plugin',
+                repository: 'ChrisLambert03/jenkins-test',
                 tagName: 'v1.0.0', 
                 uploadAssets: [
                 [filePath: 'body.txt'], 
