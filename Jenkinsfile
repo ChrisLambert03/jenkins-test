@@ -32,6 +32,10 @@ pipeline {
                 draft: false,
                 prerelease: true
                 )
+            }
+        }
+        stage("uploading assets"){
+            steps{
                 uploadGithubReleaseAsset(
                 credentialId: 'Github-PAT',
                 repository: 'jcustenborder/xjc-kafka-connect-plugin',
