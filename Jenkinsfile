@@ -17,6 +17,7 @@ pipeline {
         stage('creating asset'){
             steps{
                sh' echo hello-world > release.md'
+               sh 'echo hello-world > body.txt'
             }
         }
         stage('Making github release'){
@@ -36,7 +37,7 @@ pipeline {
                 repository: 'jcustenborder/xjc-kafka-connect-plugin',
                 tagName: 'v1.0.0', 
                 uploadAssets: [
-                [filePath: 'release.md'], 
+                [filePath: 'body.txt'], 
                     ]
                 )
             }
