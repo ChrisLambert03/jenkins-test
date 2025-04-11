@@ -28,8 +28,16 @@ pipeline {
                 tag: 'v1.0.0',
                 commitish: "${env.GIT_COMMIT}",
                 bodyFile: 'release.md',
-                draft: true,
+                draft: false,
                 prerelease: true
+                )
+                uploadGithubReleaseAsset(
+                credentialId: 'github-token',
+                repository: 'jcustenborder/xjc-kafka-connect-plugin',
+                tagName: 'v1.0.0', 
+                uploadAssets: [
+                [filePath: 'release.md'], 
+                    ]
                 )
             }
         }
