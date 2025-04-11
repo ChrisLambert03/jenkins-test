@@ -26,7 +26,7 @@ pipeline {
                 name: "Test Release",
                 credentialId: 'Github-PAT',
                  repository: 'ChrisLambert03/jenkins-test',
-                tag: 'v1.0.0',
+                tag: "v1.0.${env.BUILD_NUMBER}",
                 commitish: "${env.GIT_COMMIT}",
                 bodyFile: 'release.md',
                 draft: false,
@@ -39,7 +39,7 @@ pipeline {
                 uploadGithubReleaseAsset(
                 credentialId: 'Github-PAT',
                 repository: 'ChrisLambert03/jenkins-test',
-                tagName: 'v1.0.0', 
+                tagName: "v1.0.${env.BUILD_NUMBER}", 
                 uploadAssets: [
                 [filePath: 'body.txt'], 
                     ]
