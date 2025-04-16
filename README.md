@@ -11,3 +11,4 @@ hello
 another commit
 auto tag complete
 no more 
+new
