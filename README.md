@@ -9,4 +9,4 @@ more tests
 last test
 hello
 another commit
-tagging this commit
+auto tag complete
